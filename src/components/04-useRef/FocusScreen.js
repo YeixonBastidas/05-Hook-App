@@ -1,0 +1,30 @@
+import React, { useRef } from 'react';
+import '../03-example/Style.css';
+
+const FocusScreen = () => {
+    const inputRef = useRef();
+
+    const handleClick = () => {
+        inputRef.current.select();
+    }
+
+    return (
+        <div>
+            <h1>Focus Screen</h1>
+            <hr/>
+            <input
+                className='form-control'
+                placeholder='Su Nombre'
+                ref={inputRef}
+            />
+            <button 
+                className='btn btn-outline-primary mt-5'
+                onClick={handleClick}                
+                >
+                    Foco
+            </button>
+        </div> 
+    );
+}
+ 
+export default FocusScreen;
